@@ -1,0 +1,169 @@
+﻿<Window x:Class="Karting.RegRacerMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Karting"
+        mc:Ignorable="d"
+        Title="RegRacerMenu" Height="450" Width="800" ResizeMode="NoResize" Background="White">
+    <Grid>
+        <Label x:Name="ToEnd" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,365,-1.667,-1.333" VerticalAlignment="Top" Background="Gray" Width="795" Height="57" Foreground="White" FontFamily="Arial" FontSize="18"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Background="Gray" Width="795" Margin="0,0,-1.667,0" Height="73"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" Width="795" Height="30" FontSize="22" FontFamily="Open Sans Semibold" Margin="0,6,-1.667,0"/>
+        <TextBlock x:Name="currentTime" HorizontalAlignment="Center" TextAlignment="Center" Margin="0,44,-1.667,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Foreground="White" Width="795" FontFamily="Arial"><Span><Run Text="Москва, Россия 20 июня 2017"/></Span></TextBlock>
+        <TextBlock Text="Регистрация гонщика" TextAlignment="Center" Margin="34,71,17,309" FontSize="20"/>
+        <TextBox  x:Name="email" Margin="196,117,450.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Email" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBlock Text="Email:" TextAlignment="Center" Margin="144,117,0,0" FontSize="18" HorizontalAlignment="Left" Width="47" Height="27" VerticalAlignment="Top"/>
+        <TextBox x:Name="passwd" Margin="196,151,450.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Password" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBlock Text="Пароль:" TextAlignment="Center" Margin="125,151,0,0" FontSize="18" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+        <TextBox x:Name="passwd2" Margin="196,183,450.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Re-enter password" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBlock Text="Повторите пароль:" TextAlignment="Center" Margin="34,181,0,0" FontSize="18" HorizontalAlignment="Left" Width="157" Height="27" VerticalAlignment="Top"/>
+        <TextBlock Text="Имя:" TextAlignment="Center" Margin="149,215,0,0" FontSize="18" HorizontalAlignment="Left" Width="40" Height="27" VerticalAlignment="Top"/>
+        <TextBlock Text="Фамилия:" TextAlignment="Center" Margin="111,247,0,0" FontSize="18" HorizontalAlignment="Left" Width="80" Height="27" VerticalAlignment="Top"/>
+        <TextBlock Text="Пол:" TextAlignment="Center" Margin="151,281,0,0" FontSize="18" HorizontalAlignment="Left" Width="38" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.84"/>
+        <TextBox x:Name="imya" Margin="196,215,450.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Имя" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="fam" Margin="196,247,450.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Фамилия" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <ComboBox x:Name="pol" HorizontalAlignment="Left" Margin="196,281,0,0" VerticalAlignment="Top" Width="146" Height="27"/>
+        <TextBlock Text="Фото файл:" TextAlignment="Center" Margin="460,196,0,0" FontSize="18" HorizontalAlignment="Left" Width="94" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.84"/>
+        <TextBox x:Name="photo" Margin="460,228,186.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Photo.jpg" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Button x:Name="prosmots" Content="Просмотр" HorizontalAlignment="Left" Margin="634,228,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="prosmots_Click"/>
+        <Button x:Name="reg" Content="Регистрация" HorizontalAlignment="Left" Margin="274,334,0,0" VerticalAlignment="Top" Width="96" Height="27" Click="reg_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="403,334,0,0" VerticalAlignment="Top" Width="96" Height="27" Click="Button_Click_1"/>
+        <TextBlock Text="Дата рождения:" TextAlignment="Center" Margin="460,262,0,0" FontSize="18" HorizontalAlignment="Left" Width="134" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.84"/>
+        <TextBlock Text="Страна:" TextAlignment="Center" Margin="527,294,0,0" FontSize="18" HorizontalAlignment="Left" Width="68" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.84"/>
+        <ComboBox x:Name="strana" HorizontalAlignment="Left" Margin="603,294,0,0" VerticalAlignment="Top" Width="118" Height="27"/>
+        <DatePicker  x:Name="rozd" HorizontalAlignment="Left" Margin="603,262,0,0" VerticalAlignment="Top" Width="118" DisplayDate="2000-01-01" SelectedDateFormat="Short">
+            <DatePicker.BlackoutDates>
+                <CalendarDateRange Start="2012-01-01" End="2100-01-01" />
+            </DatePicker.BlackoutDates>
+        </DatePicker>
+        <Image x:Name="pikcha" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="91" Margin="618,117,0,0" Source="C:\Users\golik\Desktop\2.jpg"/>
+
+    </Grid>
+</Window>

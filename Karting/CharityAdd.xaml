@@ -1,0 +1,92 @@
+﻿<Window x:Class="Karting.CharityAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Karting"
+        mc:Ignorable="d"
+        Title="CharityAdd" Height="450" Width="800" ResizeMode="NoResize" Background="White">
+    <Grid>
+        <Label x:Name="ToEnd" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,365,-0.333,0" VerticalAlignment="Top" Background="Gray" Width="795" Height="57" Foreground="White" FontFamily="Arial" FontSize="18"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Background="Gray" Width="795" Margin="0,0,-0.333,0" Height="73"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" Width="795" Height="30" FontSize="22" FontFamily="Open Sans Semibold" Margin="0,6,-0.333,0"/>
+        <TextBlock x:Name="currentTime" HorizontalAlignment="Center" TextAlignment="Center" Margin="0,44,-0.333,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Foreground="White" Width="795" FontFamily="Arial"><Span><Run Text="Москва, Россия 20 июня 2017"/></Span></TextBlock>
+        <Button Content="Logout" x:Name="btn_return_menu_Copy" HorizontalAlignment="Left" Margin="701,21,0,0" VerticalAlignment="Top" Width="75" Height="29" Click="btn_return_menu_Click" />
+        <TextBlock Text="Добавление благотворительных организаций" TextAlignment="Center" Margin="30,77,21,292" FontSize="20" x:Name="AddEditText"/>
+        <TextBox  x:Name="Naimenovanie" Margin="77,134,569.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top" MaxLength="100">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Наименование" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBlock Text="Наименование:" Margin="77,107,0,0" FontSize="14" HorizontalAlignment="Left" Width="198" Height="27" VerticalAlignment="Top"/>
+        <TextBlock Text="Описание:" Margin="77,166,0,0" FontSize="14" HorizontalAlignment="Left" Width="198" Height="27" VerticalAlignment="Top"/>
+        <TextBox  x:Name="Opisanie" Margin="77,193,342.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="122" VerticalAlignment="Top" MaxLength="3000" TextWrapping="Wrap">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" AlignmentY="Top">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Описание благотворительной оргнаизации" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBlock Text="Логотип файл:" TextAlignment="Center" Margin="509,107,0,0" FontSize="14" HorizontalAlignment="Left" Width="135" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.84"/>
+        <TextBlock Text="Текущий логотип:" TextAlignment="Center" Margin="509,174,0,0" FontSize="14" HorizontalAlignment="Left" Width="175" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.84"/>
+        <TextBox x:Name="photo" Margin="509,134,137.667,0" BorderBrush="#FF686868" Foreground="#FF2E2E2E" Height="27" VerticalAlignment="Top">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="Photo.jpg" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Button x:Name="prosmots" Content="Просмотр" HorizontalAlignment="Left" Margin="683,134,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="prosmots_Click"/>
+        <Button x:Name="Save" Content="Сохранить" HorizontalAlignment="Left" Margin="285,331,0,0" VerticalAlignment="Top" Width="96" Height="27" Click="Save_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="408,331,0,0" VerticalAlignment="Top" Width="96" Height="27" x:Name="Otmena" Click="Otmena_Click"/>
+        <Image x:Name="pikcha" HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="215" Margin="509,206,0,0" Source="C:\Users\golik\Desktop\2.jpg" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,63 @@
+﻿<Window x:Class="Karting.RegOnRace"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Karting"
+        mc:Ignorable="d"
+        Title="RegOnRace" Height="450" Width="800" ResizeMode="NoResize" Background="White">
+    <Grid>
+        <Label x:Name="ToEnd" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,365,-1.667,-1.333" VerticalAlignment="Top" Background="Gray" Width="795" Height="57" Foreground="White" FontFamily="Arial" FontSize="18"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Background="Gray" Width="795" Margin="0,0,-1.667,0" Height="73"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" Width="795" Height="30" FontSize="22" FontFamily="Open Sans Semibold" Margin="0.667,6,-2.334,0"/>
+        <TextBlock x:Name="currentTime" HorizontalAlignment="Center" TextAlignment="Center" Margin="0.667,44,-2.334,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Foreground="White" Width="795" FontFamily="Arial"><Span><Run Text="Москва, Россия 20 июня 2017"/></Span></TextBlock>
+        <Button Content="Назад" x:Name="btn_return_menu" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="btn_return_menu_Click" />
+        <TextBlock Text="Регистрация на гонку" FontSize="18" TextAlignment="Center" Margin="249,82,251,275"/>
+        <TextBlock HorizontalAlignment="Left" Margin="95,128,0,0" TextWrapping="Wrap" Text="Вид гонки" TextAlignment="Center" VerticalAlignment="Top" Height="20" Width="120" FontSize="16"/>
+        <CheckBox x:Name="Vid3" Content=" Заезд 6,5 км($65)" HorizontalAlignment="Left" Margin="95,193,0,0" VerticalAlignment="Top" Checked="Vid3_Checked" Unchecked="Vid3_Unchecked"/>
+        <CheckBox x:Name="Vid1" Content=" Заезд 2,5 км($25)" HorizontalAlignment="Left" Margin="95,153,0,0" VerticalAlignment="Top" Checked="Vid1_Checked" Unchecked="Vid1_Unchecked"/>
+        <CheckBox x:Name="Vid2" Content=" Заезд 4 км($40)" HorizontalAlignment="Left" Margin="95,173,0,0" VerticalAlignment="Top" Checked="Vid2_Checked" Unchecked="Vid2_Unchecked"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,245,0,0" TextWrapping="Wrap" Text="Детали спонсорства" TextAlignment="Center" VerticalAlignment="Top" Height="20" Width="180" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="125,270,0,0" TextWrapping="Wrap" Text="Спонсор:" VerticalAlignment="Top" FontSize="14" Height="22"/>
+        <ComboBox x:Name="organizaciya" HorizontalAlignment="Left" Margin="189,270,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,297,0,0" TextWrapping="Wrap" Text="Сумма спонсорского взноса:" VerticalAlignment="Top" FontSize="14" Height="22"/>
+        <TextBox x:Name="vznos" HorizontalAlignment="Left" Height="22" Margin="189,297,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" TextChanged="vznos_TextChanged">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.4" Stretch="None" AlignmentX="Left" >
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Text="$500" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Button Content="Регистрация" HorizontalAlignment="Left" Margin="95,340,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="200,340,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click_1" />
+        <TextBlock HorizontalAlignment="Left" Margin="544,126,0,0" TextWrapping="Wrap" Text="Варианты комплектов" TextAlignment="Center" VerticalAlignment="Top" Height="20" Width="166" FontSize="16"/>
+        <RadioButton x:Name="var_A" HorizontalAlignment="Left" Margin="504,151,0,0" VerticalAlignment="Top" Height="15" Width="250" Checked="var_A_Checked" Unchecked="var_A_Unchecked">
+            <TextBox TextWrapping="Wrap" Width="226" Text="Вариант А ($0) Номер пилота + браслет"/>
+        </RadioButton>
+        <RadioButton x:Name="var_B" HorizontalAlignment="Left" Margin="504,171,0,0" VerticalAlignment="Top" Height="35" Width="250" Checked="var_B_Checked" Unchecked="var_B_Unchecked">
+            <TextBox TextWrapping="Wrap" Width="226" Height="35" Text="Вариант B ($30) Номер пилота + Шлем + Браслет"/>
+        </RadioButton>
+        <RadioButton x:Name="var_C" HorizontalAlignment="Left" Margin="504,211,0,0" VerticalAlignment="Top" Height="35" Width="250" Checked="var_C_Checked" Unchecked="var_C_Unchecked">
+            <TextBox TextWrapping="Wrap" Width="226" Height="35" Text="Вариант С ($50) Номер пилота + Экипировка + Браслет"/>
+        </RadioButton>
+        <TextBlock HorizontalAlignment="Left" Margin="517,247,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="Регистрационный взнос" VerticalAlignment="Top" Height="23" Width="216" FontSize="16"/>
+        <Label x:Name="pp" Margin="544.667,275.833,84,94.167" FontSize="28" HorizontalContentAlignment="Center"  HorizontalAlignment="Center"  VerticalAlignment="Center" Height="52" Width="166"/>
+        <Button Content="Logout" x:Name="btn_return_menu_Copy" HorizontalAlignment="Left" Margin="679,26,0,0" VerticalAlignment="Top" Width="75" Height="29" Click="btn_return_menu_Click" />
+
+    </Grid>
+</Window>

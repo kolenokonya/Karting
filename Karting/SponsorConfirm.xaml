@@ -1,0 +1,21 @@
+﻿<Window x:Class="Karting.SponsorConfirm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Karting"
+        mc:Ignorable="d"
+        Title="SponsorConfirm"  Height="450" Width="800" ResizeMode="NoResize" Background="White">
+    <Grid>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Background="Gray" Width="795" Margin="0,0,-0.333,0" Height="73"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" Width="795" Height="30" FontSize="22" FontFamily="Open Sans Semibold" Margin="0,6,-0.333,0"/>
+        <TextBlock x:Name="currentTime" HorizontalAlignment="Center" TextAlignment="Center" Margin="0,44,-0.333,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Foreground="White" Width="795" FontFamily="Arial"><Span><Run Text="Москва, Россия 20 июня 2017"/></Span></TextBlock>
+        <Label x:Name="ToEnd" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,365,-0.333,0" VerticalAlignment="Top" Background="Gray" Width="795" Height="57" Foreground="White" FontFamily="Arial" FontSize="18"/>
+        <Button x:Name="exit" Margin="336,313,329.667,79" Content="Назад" Click="exit_Click" />
+        <TextBlock Text="" TextAlignment="Center" Margin="321,173,316,0" FontSize="18" Height="41" VerticalAlignment="Top"/>
+        <TextBlock Text="Спасибо за спонсорскую поддержку!" TextAlignment="Center" Margin="204,76,185,0" FontSize="18" Height="51" VerticalAlignment="Top"/>
+        <TextBlock x:Name="name" Text="" TextAlignment="Center" Margin="194,132,195,0" FontSize="18" Height="36" VerticalAlignment="Top"/>
+        <Label x:Name="ppp" Margin="317,215,311.667,126" FontSize="28" HorizontalContentAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="81" Width="166"/>
+
+    </Grid>
+</Window>
